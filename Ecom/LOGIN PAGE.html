@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .login-container {
+            width: 300px;
+            margin: 0 auto;
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.2);
+            background-color: #fff;
+        }
+      
+        .login-container:hover{
+            box-shadow: 0 0 20px rgba(1,1,1);
+            transition: ease-in-out 0.3s;
+        }
+
+        .login-container h2 {
+            text-align: center;
+            color: #333;
+        }
+        .login-container img {
+            display: block;
+            margin: 0 auto;
+            margin-bottom: 20px;
+            border-radius: 50%;
+        }
+        .login-container input[type="text"],
+        .login-container input[type="password"] {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            outline: none;
+        }
+        .login-container input[type="text"]:focus,
+        .login-container input[type="password"]:focus {
+            border-color: #007bff;
+        }
+        .login-container input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+            outline: none;
+        }
+        .login-container input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        .prof img {
+            width: 100px; 
+            border: 2px solid aqua; 
+            transition: border-color 0.3s ease; 
+        }
+    
+        .prof img:hover {
+            border-color: aqua; 
+            box-shadow: 0 0 10px aqua; 
+        }
+
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <div class="prof">
+        <img src="e com.png" alt="Company Logo" width="100">
+        </div>
+        <h2>Login</h2>
+        <form id="loginForm">
+            <input type="text" id="username" placeholder="Username" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <input type="submit" value="Login">
+        </form>
+    </div>
+
+    <script>
+        document.getElementById("loginForm").addEventListener("submit", function(event) {
+            event.preventDefault(); 
+           
+            var manualUsername = "Aakash";
+            var manualPassword = "123";
+
+           
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+
+            
+            if (username === manualUsername && password === manualPassword) {
+                
+                window.location.href = "E-com1.html";
+            } else {
+                
+                alert("Invalid username or password. Please try again.");
+            }
+        });
+    </script>
+</body>
+</html>
+
+
+<!-----------------------------------------------END OF LOGIN PAGE------------------------------------------------------>
